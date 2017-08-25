@@ -1,5 +1,5 @@
 # playground #
-_Some description about your project here_
+playground for wingman testing
 
 * Maven, version 3+
 * Java JDK 1.8
