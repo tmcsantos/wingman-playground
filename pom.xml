@@ -4,14 +4,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.pentaho</groupId>
   <artifactId>playground</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>8.1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
     <!-- specific versions set upon migration to maintenance -->
-    <version>RELEASE</version>
+    <version>8.1.0.0-SNAPSHOT</version>
   </parent>
 
   <name>Pentaho Community Edition Project: playground</name>
