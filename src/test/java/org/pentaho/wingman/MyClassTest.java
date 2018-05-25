@@ -55,4 +55,9 @@ public class MyClassTest {
     assertEquals("Hello Sir!", myClass.sayHello(Optional.of("Sir")));
   }
 
+  @Test
+  public void testHelloSir2() {
+    assertEquals("Hello Sir2!", myClass.sayHello(Optional.of("Sir2")));
+  }
+
 }
