@@ -5,19 +5,13 @@
   <groupId>org.pentaho</groupId>
   <artifactId>playground</artifactId>
   <version>8.1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <!-- specific versions set upon migration to maintenance -->
     <version>8.1.0.0-SNAPSHOT</version>
   </parent>
-
-  <name>Pentaho Community Edition Project: playground</name>
-  <description>a Pentaho sponsored open source project</description>
-  <url>http://www.pentaho.org</url>
-
   
   <licenses>
     <license>
@@ -26,45 +20,48 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
-
-  <!--
-  <developers>
-    <developer>
-      <name>YOU</name>
-      <email>YOUR_EMAIL</email>
-      <roles>
-        <role>creator</role>
-      </roles>
-    </developer>
-  </developers>
-   -->
 
   <properties>
      <slf4j.version>1.7.21</slf4j.version>
      <license.licenseName>mit</license.licenseName>
   </properties>
 
-  <!-- TODO: ensure this matches your actual github repo location -->
   <scm>
-    <developerConnection>scm:git:git@github.com:pentaho/${project.artifactId}.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:tmcsantos/wingman-playground.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <dependencies>
-    <!-- 'COMPILE' SCOPED DEPS -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
-
-    <!-- 'RUNTIME' SCOPED DEPS -->
-
-    <!-- 'PROVIDED' SCOPED DEPS -->
-
-    <!-- 'TEST' SCOPED DEPS -->
-
   </dependencies>
 
+  <profiles>
+    <profile>
+      <id>profile-A</id>
+      <activation>
+        <property>
+          <name>!skipDefault</name>
+        </property>
+      </activation>
+      <modules>
+        <module>module-1</module>
+        <module>module-2</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>profile-B</id>
+      <activation>
+        <property>
+          <name>!skipDefault</name>
+        </property>
+      </activation>
+      <modules>
+        <module>module-3</module>
+      </modules>
+    </profile>
+  </profiles>
 </project>
