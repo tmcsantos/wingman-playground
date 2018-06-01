@@ -32,6 +32,8 @@ import org.slf4j.LoggerFactory;
 public class MyClass {
   private static final Logger logger = LoggerFactory.getLogger( MyClass.class );
 
+  public void aMethod() { /* do nothing */ }
+
   public String sayHello() {
     return sayHello( Optional.empty() );
   }
